@@ -1,0 +1,11 @@
+//加载字体文件
+@mixin loadFont($fonts...) {
+    @each $name in $fonts {
+        @font-face {
+            font-family: $name;
+            src: url('../../public/font/#{$name}.ttf') format("truetype");
+        }
+    }
+}
+
+@include loadFont('小米雅亭', '方正屏显雅宋', '方正清刻本悦宋简体', '方正聚珍')
